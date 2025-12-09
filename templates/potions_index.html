@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block title %}Magic Potions{% endblock %}
+
+{% block content %}
+<h1>Magical Potions</h1>
+<div>
+{% for potion in potions %}
+    <div>
+        <h2>{{ potion.name }}</h2>
+        <p>{{ potion.purpose }}</p>
+        <a href="/potions/{{ potion.id }}">How to prepare</a>
+    </div>
+{% endfor %}
+</div>
+{% endblock %}

@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+
+{% block title %}Something{% endblock %}
+
+{% block content %}
+<h1>{{ potion.name }}</h1>
+<p>{{ potion.purpose }}</p>
+<p>Time to prepare: {{ potion.preparation_time }}</p>
+{% endblock %}
