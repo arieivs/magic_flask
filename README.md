@@ -10,3 +10,11 @@ Ideas styling
 * [Old parchment](https://codepen.io/AgnusDei/pen/NWPbOxL)
 * [CSS background effects](https://prismic.io/blog/css-background-effects)
 * [CSS background patterns](https://www.magicpattern.design/tools/css-backgrounds)
+
+TO DO
+* Add a database
+* Create new potions with user input
+* Handle errors/show 404
+* Render another html file in the base.html (for example with a footer)?
+* Improve navegation
+* Improve esthetics
