@@ -13,8 +13,6 @@ Ideas styling
 
 TO DO
 * Add a database
-* Create new potions with user input
-* Handle errors/show 404
 * Render another html file in the base.html (for example with a footer)?
 * Improve navegation
 * Improve esthetics
