@@ -4,8 +4,19 @@
         <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
     </head>
     <body>
-        <div class="wrapper">
-            {% block content %}{% endblock %}
-        </div>
+        <header>
+            <div class="wrapper">
+                <ul>
+                    <li><a href="{{ url_for('home') }}">Home</a></li>
+                    <li><a href="{{ url_for('potions_index') }}">Potions</a></li>
+                    <li><a href="{{ url_for('potions_new') }}">Add a Recipe</a></li>
+                </ul>
+            </div>
+        </header>
+        <main>
+            <div class="wrapper">
+                {% block content %}{% endblock %}
+            </div>
+        </main>
     </body>
 </html>

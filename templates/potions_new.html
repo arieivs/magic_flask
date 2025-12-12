@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block title %}Add a Recipe{% endblock %}
+
+{% block content %}
+<h1>Add a Recipe</h1>
+<form action="/potions/" method="post">
+    <label for="name">Name: </label>
+    <input type="text" name="name" id="name" required />
+    <label for="purpose">Purpose: </label>
+    <input type="text" name="purpose" id="purpose" required />
+    <label for="preparation_time">Preparation time: </label>
+    <input type="text" name="preparation_time" id="preparation_time" required />
+    <input type="submit" value="Add this Recipe" />
+</form>
+{% endblock %}
