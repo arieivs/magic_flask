@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, abort
 
 app = Flask(__name__)
 
@@ -27,10 +27,10 @@ def potions_index():
 @app.get('/potions/<int:potion_id>/')
 def potion_detail(potion_id):
     #TODO go get information from this potion in the database
-    #try:
-    potion = [candidate for candidate in potions if candidate['id'] == potion_id][0]
-    #except IndexError:
-    #TODO show 404
+    try:
+        potion = [candidate for candidate in potions if candidate['id'] == potion_id][0]
+    except IndexError:
+        abort(404)
     return render_template('potion_detail.html', potion=potion)
 
 @app.get('/potions/new')
@@ -46,3 +46,7 @@ def potions_new_post():
     potions.append(new_potion)
     #TODO save new potion in the future database
     return render_template('potions_index.html', potions=potions)
+
+@app.errorhandler(404)
+def page_not_found(error):
+    return render_template('page_not_found.html')
